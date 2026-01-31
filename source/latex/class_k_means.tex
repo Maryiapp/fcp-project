@@ -1,0 +1,102 @@
+\doxysection{KMeans Class Reference}
+\hypertarget{class_k_means}{}\label{class_k_means}\index{KMeans@{KMeans}}
+
+
+Implements the K-\/\+Means clustering algorithm.  
+
+
+
+
+{\ttfamily \+\#include $<$kmeans.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_k_means_a60a2e84cfc4a437dd7cb79aa9418d037}{KMeans}} (int k)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_k_means_afc5c510b7884cf58a7acdb40fd74b496}{load\+Data}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Loads dataset from CSV file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_k_means_a51201bdf27d8af9bb53675caa450547f}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the clustering algorithm. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_k_means_ab3f5d9b461a88623f66af81f2ac5d988}{save\+Results}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Saves clustering results to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the K-\/\+Means clustering algorithm. 
+
+This class loads data, performs clustering, and saves the results to a file. 
+
+\label{doc-constructors}
+\Hypertarget{class_k_means_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_means_a60a2e84cfc4a437dd7cb79aa9418d037}\index{KMeans@{KMeans}!KMeans@{KMeans}}
+\index{KMeans@{KMeans}!KMeans@{KMeans}}
+\doxysubsubsection{\texorpdfstring{KMeans()}{KMeans()}}
+{\footnotesize\ttfamily \label{class_k_means_a60a2e84cfc4a437dd7cb79aa9418d037} 
+KMeans::\+\+KMeans (\begin{DoxyParamCaption}\item[{int}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Number of clusters. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_k_means_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_means_afc5c510b7884cf58a7acdb40fd74b496}\index{KMeans@{KMeans}!loadData@{loadData}}
+\index{loadData@{loadData}!KMeans@{KMeans}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily \label{class_k_means_afc5c510b7884cf58a7acdb40fd74b496} 
+void KMeans::\+load\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Loads dataset from CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to input file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_means_a51201bdf27d8af9bb53675caa450547f}\index{KMeans@{KMeans}!run@{run}}
+\index{run@{run}!KMeans@{KMeans}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_k_means_a51201bdf27d8af9bb53675caa450547f} 
+void KMeans::\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs the clustering algorithm. 
+
+Executes the K-\/\+Means algorithm. \Hypertarget{class_k_means_ab3f5d9b461a88623f66af81f2ac5d988}\index{KMeans@{KMeans}!saveResults@{saveResults}}
+\index{saveResults@{saveResults}!KMeans@{KMeans}}
+\doxysubsubsection{\texorpdfstring{saveResults()}{saveResults()}}
+{\footnotesize\ttfamily \label{class_k_means_ab3f5d9b461a88623f66af81f2ac5d988} 
+void KMeans::\+save\+Results (\begin{DoxyParamCaption}\item[{const string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves clustering results to file. 
+
+Saves clustering results to output file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to output file. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{kmeans_8h}{kmeans.\+h}}\item 
+\doxymbox{\hyperlink{kmeans_8cpp}{kmeans.\+cpp}}\end{DoxyCompactItemize}

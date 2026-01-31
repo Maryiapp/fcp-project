@@ -1,0 +1,5 @@
+﻿  kmeans.cpp
+C:\Users\user\source\repos\Project_1\Project_1\kmeans.cpp(53,39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
+  Project_1.vcxproj -> C:\Users\user\source\repos\Project_1\x64\Debug\Project_1.exe

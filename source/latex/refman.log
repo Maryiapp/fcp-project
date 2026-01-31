@@ -1,0 +1,297 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.29)  29 JAN 2026 22:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./refman.tex
+(refman.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y
+package info suppressed
+) (doxygen.sty
+Package: doxygen 
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/base\alltt.sty
+Package: alltt 2024/07/07 v2.0g defines alltt environment
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen149
+\ar@mcellbox=\box53
+\extrarowheight=\dimen150
+\NC@list=\toks17
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count284
+\calc@Bcount=\count285
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count286
+\calc@Cskip=\skip55
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count287
+\float@exts=\toks18
+\float@box=\box55
+\@float@everytoks=\toks19
+\@floatcapt=\box56
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read2
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box57
+\sift@deathcycles=\count288
+\@vwid@loff=\dimen153
+\@vwid@roff=\dimen154
+)
+==> First Aid for varwidth.sty applied!
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+) (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks22
+\minrowclearance=\skip56
+\rownum=\count289
+) (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count290
+\LTcapwidth=\dimen155
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count291
+\LT@rows=\count292
+\c@LT@tables=\count293
+\c@LT@chunks=\count294
+\LT@p@ftn=\toks23
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/xltabular\xltabular.sty
+Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen156
+\TX@old@table=\dimen157
+\TX@old@col=\dimen158
+\TX@target=\dimen159
+\TX@delta=\dimen160
+\TX@cols=\count295
+\TX@ftn=\toks24
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count296
+)
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/ltablex\ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+))
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabularray.st
+y
+Package: tabularray 2025-11-27 v2025C Typeset tabulars and arrays with LaTeX3
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors.st
+y
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
+.sty (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+))
+\g__tblr_nohyper_int=\count298
+\l__tblr_a_int=\count299
+\l__tblr_c_int=\count300
+\l__tblr_r_int=\count301
+\l__tblr_d_dim=\dimen161
+\l__tblr_h_dim=\dimen162
+\l__tblr_o_dim=\dimen163
+\l__tblr_p_dim=\dimen164
+\l__tblr_q_dim=\dimen165
+\l__tblr_r_dim=\dimen166
+\l__tblr_s_dim=\dimen167
+\l__tblr_t_dim=\dimen168
+\l__tblr_v_dim=\dimen169
+\l__tblr_w_dim=\dimen170
+\l__tblr_a_box=\box63
+\l__tblr_b_box=\box64
+\l__tblr_c_box=\box65
+\l__tblr_d_box=\box66
+\c@tblrcount=\count302
+\c@colnum=\count303
+\c@rowcount=\count304
+\c@colcount=\count305
+\abovesep=\dimen171
+\belowsep=\dimen172
+\leftsep=\dimen173
+\rightsep=\dimen174
+\gTblrLevelInt=\count306
+\g__tblr_data_row_key_count_int=\count307
+\g__tblr_data_column_key_count_int=\count308
+\g__tblr_data_cell_key_count_int=\count309
+\g__tblr_array_int=\count310
+\l__tblr_key_count_int=\count311
+\l__tblr_key_quotient_int=\count312
+\l__tblr_key_quotient_two_int=\count313
+\l__tblr_key_remainder_int=\count314
+\g__tblr_data_str_value_count_int=\count315
+\lTblrChildTotalInt=\count316
+\lTblrChildHtotalInt=\count317
+\lTblrChildVtotalInt=\count318
+\l__child_diff_h_int=\count319
+\l__child_diff_v_int=\count320
+\l__child_sign_h_int=\count321
+\l__child_sign_v_int=\count322
+\l__child_step_int=\count323
+\lTblrDefaultHruleWidthDim=\dimen175
+\lTblrDefaultVruleWidthDim=\dimen176
+\l__tblr_split_balance_int=\count324
+\l__tblr_strut_dp_dim=\dimen177
+\l__tblr_strut_ht_dim=\dimen178
+\g__tblr_cell_wd_dim=\dimen179
+\g__tblr_cell_ht_dim=\dimen180
+\g__tblr_cell_head_dim=\dimen181
+\g__tblr_cell_foot_dim=\dimen182
+\l__tblr_measured_cell_box=\box67
+\g__tblr_last_box=\box68
+\l__tblr_temp_box=\box69
+\l__tblr_column_target_dim=\dimen183
+\l__tblr_hfuzz_dim=\dimen184
+\l__tblr_caption_box=\box70
+\l__tblr_caption_left_box=\box71
+\lTblrRowHeadInt=\count325
+\lTblrRowFootInt=\count326
+\l__tblr_row_head_box=\box72
+\l__tblr_row_foot_box=\box73
+\l__tblr_row_head_foot_dim=\dimen185
+\lTblrTableWidthDim=\dimen186
+\l__tblr_table_firsthead_box=\box74
+\l__tblr_table_middlehead_box=\box75
+\l__tblr_table_lasthead_box=\box76
+\l__tblr_table_firstfoot_box=\box77
+\l__tblr_table_middlefoot_box=\box78
+\l__tblr_table_lastfoot_box=\box79
+\l__tblr_remain_height_dim=\dimen187
+\l__tblr_next_rows_dim=\dimen188
+\l__tblr_page_overfill_dim=\dimen189
+\l__tblr_long_from_int=\count327
+\l__tblr_long_to_int=\count328
+\l__tblr_curr_i_int=\count329
+\l__tblr_prev_i_int=\count330
+\lTblrTablePageInt=\count331
+\l__tblr_table_head_box=\box80
+\l__tblr_table_foot_box=\box81
+\l__tblr_table_head_foot_dim=\dimen190
+\l__tblr_table_head_body_foot_dim=\dimen191
+\l__tblr_table_box=\box82
+\lTblrRowFirstInt=\count332
+\lTblrRowLastInt=\count333
+\l__tblr_cover_box_a_dim=\dimen192
+\l__tblr_cover_box_b_dim=\dimen193
+\l__tblr_table_hlines_box=\box83
+\l__tblr_hline_box=\box84
+\l__tblr_row_box=\box85
+\l__tblr_col_o_wd_dim=\dimen194
+\l__tblr_col_b_wd_dim=\dimen195
+\l__tblr_hline_leftskip_dim=\dimen196
+\l__tblr_hline_rightskip_dim=\dimen197
+\l__tblr_row_ht_dim=\dimen198
+\l__tblr_row_dp_dim=\dimen199
+\l__tblr_row_abovesep_dim=\dimen256
+\l__tblr_row_belowsep_dim=\dimen257
+\l__tblr_row_vlines_box=\box86
+\l__tblr_vline_box=\box87
+\l__tblr_cell_box=\box88
+\l__tblr_row_upper_dim=\dimen258
+\l__tblr_row_lower_dim=\dimen259
+\l__tblr_row_vpace_dim=\dimen260
+\l__tblr_vline_aboveskip_dim=\dimen261
+\l__tblr_vline_belowskip_dim=\dimen262
+\lTblrCellRowSpanInt=\count334
+\lTblrCellColSpanInt=\count335
+\l__tblr_cell_wd_dim=\dimen263
+\l__tblr_cell_ht_dim=\dimen264
+\lTblrCellAboveBorderWidthDim=\dimen265
+\lTblrCellBelowBorderWidthDim=\dimen266
+\lTblrCellLeftBorderWidthDim=\dimen267
+\lTblrCellRightBorderWidthDim=\dimen268
+\l__tblr_diag_box=\box89
+\l__tblr_cell_inner_wd_dim=\dimen269
+\l__tblr_cell_inner_dp_dim=\dimen270
+\l__tblr_cell_hanchor_dim=\dimen271
+\l__tblr_last_cell_table_ht_dim=\dimen272
+\l__tblr_last_cell_table_dp_dim=\dimen273
+\l__tblr_last_vline_wd_dim=\dimen274
+\l__tblr_tikz_node_box=\box90
+)
+\g__doxy_nohyper_int=\count336
+\doxytablewidth=\dimen275

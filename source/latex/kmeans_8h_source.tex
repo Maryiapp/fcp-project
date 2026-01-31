@@ -1,0 +1,50 @@
+\doxysection{kmeans.\+h}
+\hypertarget{kmeans_8h_source}{}\label{kmeans_8h_source}\doxymbox{\hyperlink{kmeans_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ KMEANS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ KMEANS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{point_8h}{point.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_centroid}{Centroid}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ vector<double>\ \doxymbox{\hyperlink{struct_centroid_a85f5a80cbfbc4b68556ff54589c49cbc}{coords}};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_k_means_a60a2e84cfc4a437dd7cb79aa9418d037}{KMeans}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{class_k_means_a60a2e84cfc4a437dd7cb79aa9418d037}{KMeans}}(\textcolor{keywordtype}{int}\ k);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_k_means_afc5c510b7884cf58a7acdb40fd74b496}{loadData}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_k_means_a51201bdf27d8af9bb53675caa450547f}{run}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_k_means_ab3f5d9b461a88623f66af81f2ac5d988}{saveResults}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ k;\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ dimensions\ =\ 0;\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ vector<Point>\ points;\ }
+\DoxyCodeLine{00062\ \ \ \ \ vector<Centroid>\ centroids;\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ initCentroids();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ assignClusters();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ updateCentroids();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ distance(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_point}{Point}}\&\ p,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_centroid}{Centroid}}\&\ c);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasConverged(\textcolor{keyword}{const}\ vector<Centroid>\&\ oldCentroids,\ \textcolor{keywordtype}{double}\ tol);}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00088\ }
+
+\end{DoxyCode}
