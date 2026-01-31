@@ -1,20 +1,24 @@
-#ifndef STRUCTURES_H 
-#define STRUCTURES_H 
+#ifndef POINT_H
+#define POINT_H
+
+/**
+ * @file point.h
+ * @brief Defines the Point structure.
+ */
 
 #include <vector>
-#include <string>
-#include <map>
 
-struct graph
-{
-    struct node
-    {
-        unsigned int colour = 0;
-        std::vector<std::string> neighbours;
-    };
+ /**
+  * @struct Point
+  * @brief Represents a data point in multidimensional space.
+  */
+struct Point {
 
-    std::map<std::string, node> nodes;
-    unsigned number_of_colours = 0;
+    /// Coordinates of the point
+    std::vector<double> coords;
+
+    /// Cluster assignment
+    int cluster = -1;
 };
 
 #endif
