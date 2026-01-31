@@ -1,106 +1,228 @@
+/**
+ * @file kmeans.cpp
+ * @brief Implementation of KMeans class.
+ */
 
-#include <iostream>
+#include "kmeans.h"
 #include <fstream>
+#include <sstream>
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
 
-#include "functions.h"
-#include "structures.h"
+using namespace std;
 
-void print_colours (const graph & g, const std::string & output_file_name)
-{
-    std::ofstream file (output_file_name);
-    if (file)
-    {
+/**
+ * @brief Constructor implementation.
+ */
+KMeans::KMeans(int k) : k(k) {}
 
-        for (unsigned int colour = 1; colour <= g.number_of_colours; ++colour)
-        {
-            file << "sector " << colour << " : ";
+/**
+ * @brief Loads dataset from CSV file.
+ */
+void KMeans::loadData(const string& filename) {
 
-            for (const auto & [ name, node_info ] : g.nodes)
-            {
-                if (node_info.colour == colour)
-                {
-                    file << name << " ";
-                }
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cout << "Cannot open input file: " << filename << "\n";
+        exit(1);
+    }
+
+    string line;
+    bool firstLine = true;
+
+    while (getline(file, line)) {
+
+        if (line.empty()) continue;
+
+        if (firstLine) {
+            firstLine = false;
+            continue;
+        }
+
+        stringstream ss(line);
+        string token;
+        Point p;
+
+        for (int i = 0; i < 4; i++) {
+            if (!getline(ss, token, ',')) break;
+            p.coords.push_back(stod(token));
+        }
+
+        if (points.empty())
+            dimensions = p.coords.size();
+
+        if (p.coords.size() == dimensions)
+            points.push_back(p);
+    }
+
+    file.close();
+
+    cout << "Loaded points: " << points.size() << "\n";
+    cout << "Detected dimensions: " << dimensions << "\n";
+
+    initCentroids();
+}
+
+/**
+ * @brief Randomly initializes centroids.
+ */
+void KMeans::initCentroids() {
+
+    if (points.size() < k) {
+        cout << "Error: k > number of points\n";
+        exit(1);
+    }
+
+    centroids.resize(k);
+
+    for (int i = 0; i < k; i++) {
+        int index = rand() % points.size();
+        centroids[i].coords = points[index].coords;
+    }
+}
+
+/**
+ * @brief Computes squared Euclidean distance.
+ */
+double KMeans::distance(const Point& p, const Centroid& c) {
+
+    double sum = 0.0;
+
+    for (size_t i = 0; i < p.coords.size(); i++) {
+        double diff = p.coords[i] - c.coords[i];
+        sum += diff * diff;
+    }
+
+    return sum;
+}
+
+/**
+ * @brief Assigns each point to the nearest centroid.
+ */
+void KMeans::assignClusters() {
+
+    for (auto& p : points) {
+
+        double bestDist = distance(p, centroids[0]);
+        int bestCluster = 0;
+
+        for (int i = 1; i < k; i++) {
+            double d = distance(p, centroids[i]);
+            if (d < bestDist) {
+                bestDist = d;
+                bestCluster = i;
             }
-            file << std::endl;
+        }
+
+        p.cluster = bestCluster;
+    }
+}
+
+/**
+ * @brief Updates centroid coordinates.
+ */
+void KMeans::updateCentroids() {
+
+    vector<int> counts(k, 0);
+    vector<vector<double>> newCoords(k, vector<double>(dimensions, 0.0));
+
+    for (const auto& p : points) {
+
+        int c = p.cluster;
+        counts[c]++;
+
+        for (int j = 0; j < dimensions; j++)
+            newCoords[c][j] += p.coords[j];
+    }
+
+    for (int i = 0; i < k; i++) {
+
+        if (counts[i] == 0) continue;
+
+        for (int j = 0; j < dimensions; j++)
+            centroids[i].coords[j] = newCoords[i][j] / counts[i];
+    }
+}
+
+/**
+ * @brief Checks if centroids have converged.
+ */
+bool KMeans::hasConverged(const vector<Centroid>& oldCentroids, double tol) {
+
+    for (int i = 0; i < k; i++) {
+
+        double dist = 0;
+
+        for (int j = 0; j < dimensions; j++) {
+            double diff = centroids[i].coords[j] - oldCentroids[i].coords[j];
+            dist += diff * diff;
+        }
+
+        if (dist > tol)
+            return false;
+    }
+
+    return true;
+}
+
+/**
+ * @brief Executes the K-Means algorithm.
+ */
+void KMeans::run() {
+
+    const int maxIter = 100;
+    const double tol = 1e-4;
+
+    for (int iter = 0; iter < maxIter; iter++) {
+
+        vector<Centroid> oldCentroids = centroids;
+
+        assignClusters();
+        updateCentroids();
+
+        if (hasConverged(oldCentroids, tol)) {
+            cout << "Converged after " << iter + 1 << " iterations\n";
+            break;
         }
     }
 }
 
-void colour_nodes(graph & g)
-{
-    auto number_of_nodes_without_colour = g.nodes.size();
+/**
+ * @brief Saves clustering results to output file.
+ */
+void KMeans::saveResults(const string& filename) {
 
-    unsigned int colour = 0;
-    while (number_of_nodes_without_colour > 0)
-    {
-        ++colour;
-        for (auto & [name, node_info] : g.nodes)
-        {
-            auto node_colour = node_info.colour;
-            if (node_colour == 0)
-            {
-                bool colouring_possible = true;
-                for (const std::string & neighbour : node_info.neighbours)
-                {
-                    auto neighbour_colour = g.nodes[neighbour].colour;
-                    if (neighbour_colour == colour)
-                        colouring_possible = false;
-                }
-                if (colouring_possible)
-                {
-                    node_info.colour = colour;
-                    --number_of_nodes_without_colour;
-                }
-            }
+    ofstream out(filename);
+
+    if (!out.is_open()) {
+        cout << "Cannot open output file: " << filename << "\n";
+        return;
+    }
+
+    out << "K-Means Clustering\nCentroids:\n";
+
+    for (int i = 0; i < k; i++) {
+        out << "Centroid " << i << ": ";
+        for (double v : centroids[i].coords)
+            out << v << " ";
+        out << "\n";
+    }
+
+    out << "\nPoints and clusters:\n";
+
+    for (size_t i = 0; i < points.size(); i++) {
+
+        out << "Point " << i << ": (";
+
+        for (size_t j = 0; j < points[i].coords.size(); j++) {
+            out << points[i].coords[j];
+            if (j + 1 < points[i].coords.size())
+                out << ", ";
         }
-    }
-    g.number_of_colours = colour;
-}
 
-void print(const graph & g)
-{
-    for (const auto & [name, node_info] : g.nodes)   // vertex is a node, node is a vertex
-    {
-        std::cout << name << " (" << node_info.colour << ") : ";
-        for (const auto & s : node_info.neighbours)
-            std::cout << s << " ";
-        std::cout << std::endl;
-    }
-}
-
-graph read_conflicts(const std::string& input_file_name)
-{
-    graph result;
-
-    std::ifstream file (input_file_name);
-
-    std::string left, right;
-    while (file >> left >> right)
-    {
-        result.nodes[left].neighbours.push_back(right);
-        result.nodes[right].neighbours.push_back(left);
+        out << ") -> cluster " << points[i].cluster << "\n";
     }
 
-    return result;
-}
-
-
-void help(char * params[])
-{
-    std::cout << "usage:" << std::endl;
-    std::cout << params[0] << " input_file_name output_file_name" << std::endl;
-}
-
-std::pair<std::string, std::string> read_names_of_files(int number_params, char * params[])
-{
-    if (number_params == 3)
-    {
-        std::string input_file_name {params[1]};
-        std::string output_file_name {params[2]};
-
-        return {input_file_name, output_file_name};
-    }
-    else
-        return {};
+    out.close();
 }
